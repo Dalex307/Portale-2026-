@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portale delle Origini | Risveglio e Guarigione</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-bright: #f1d592;
+            --deep-black: #0a0a0b;
+            --soft-white: #e8e8e8;
+            --card-gradient: linear-gradient(145deg, #1a1a1c, #111112);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--deep-black);
+            color: var(--soft-white);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Sfondo Stellato Leggero */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        header {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(10,10,11,0.2), var(--deep-black)), 
+                        url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2094');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            color: var(--gold);
+            margin: 0;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            letter-spacing: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold-bright);
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "✦";
+            display: block;
+            font-size: 1rem;
+            margin-top: 10px;
+            opacity: 0.6;
+        }
+
+        /* Cards Professionali */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--card-gradient);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 20px rgba(212, 175, 55, 0.1);
+        }
+
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            color: var(--gold-bright);
+            margin: 20px 0;
+            font-weight: 600;
+        }
+
+        /* Pulsanti */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: 0.3s;
+            letter-spacing: 1px;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--deep-black);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        /* Footer & Info */
+        .info-box {
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 100px;
+            border: 1px dashed var(--gold);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 0.8rem;
+            color: #555;
+            letter-spacing: 2px;
+        }
+
+        .contact-link {
+            color: var(--gold-bright);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Portale delle Origini</h1>
+    <div class="subtitle">Risveglio • Guarigione • Ritorno a Sé</div>
+</header>
+
+<div class="container">
+    <h2 class="section-title">Trattamenti Sacri</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="images/oracoli.png" alt="Oracoli">
+            <h3>Letture e Oracoli</h3>
+            <p>Sessioni personalizzate di Tarocchi e Oracoli in formato Audio o Video per illuminare i tuoi passi.</p>
+            <a href="mailto:deromaalex30@gmail.com" class="btn btn-gold">Richiedi Lettura</a>
+            <a href="https://www.paypal.me/alexderoma" class="btn btn-outline">PayPal</a>
+        </div>
+
+        <div class="card">
+            <img src="images/guarigione_anima.png" alt="Anima">
+            <h3>Guarigione dell'Anima</h3>
+            <p>Pulizia sciamanica profonda e recupero dei frammenti d'anima dispersi nel tempo.</p>
+            <div class="price">€30</div>
+            <a href="https://wa.me/393482959628" class="btn btn-gold">Prenota Trattamento</a>
+            <a href="https://www.paypal.me/alexderoma" class="btn btn-outline">PayPal</a>
+        </div>
+    </div>
+
+    <h2 class="section-title">Formazione Digitale</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="images/canto_radici.png" alt="Corsi">
+            <h3>Il Canto delle Radici</h3>
+            <p>Corso digitale per la pulizia sciamanica e il recupero del proprio potere ancestrale.</p>
+            <div class="price">€30</div>
+            <a href="https://payhip.com/portaledelleorigini" class="btn btn-gold">Accedi al Corso</a>
+        </div>
+        
+        <div class="card">
+            <img src="images/cammino_portale.png" alt="Libro">
+            <h3>Il Cammino del Portale</h3>
+            <p>Il mio libro: un viaggio di risveglio e attraversamento interiore disponibile su Amazon.</p>
+            <a href="https://amzn.eu/d/7D6S8Xe" class="btn btn-gold">Acquista il Libro</a>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <h3>Sincronicità Planetaria</h3>
+        <p>Ogni sessione viene consacrata seguendo le energie del giorno. <br>
+        Contattami per scoprire il momento migliore per il tuo rituale.</p>
+        <p>
+            <strong>WhatsApp:</strong> <a href="https://wa.me/393482959628" class="contact-link">+39 348 295 9628</a><br>
+            <strong>Email:</strong> <a href="mailto:deromaalex30@gmail.com" class="contact-link">deromaalex30@gmail.com</a>
+        </p>
+    </div>
+</div>
+
+<footer>
+    © 2026 PORTALE DELLE ORIGINI — TUTTI I DIRITTI RISERVATI
+</footer>
+
+</body>
+</html>
