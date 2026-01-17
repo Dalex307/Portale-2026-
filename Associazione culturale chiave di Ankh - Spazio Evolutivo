@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spazio Evolutivo - Chiave di Ankh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c5a059;
+            --bg-dark: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --text-gray: #b0b0b0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070');
+            background-size: cover;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--gold); margin: 0; letter-spacing: 4px; }
+        .tagline { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-gray); }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+        /* Sezione Missione */
+        .mission-box {
+            text-align: center;
+            border: 1px solid var(--gold);
+            padding: 40px;
+            margin-bottom: 80px;
+            background: rgba(197, 160, 89, 0.05);
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        /* Attività Associative */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 5px;
+            transition: 0.3s;
+            border-left: 4px solid var(--gold);
+        }
+
+        .card:hover { transform: translateY(-5px); background: #222; }
+
+        /* Tesseramento */
+        .tesseramento {
+            background: var(--gold);
+            color: black;
+            padding: 50px;
+            text-align: center;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .price { font-size: 3rem; font-weight: bold; margin: 10px 0; }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: black;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 20px;
+            border-radius: 50px;
+        }
+
+        .footer-info {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <p class="tagline">Associazione Culturale Ricreativa</p>
+    <h1>Spazio Evolutivo</h1>
+    <p class="tagline">Chiave di Ankh</p>
+</header>
+
+<div class="container">
+    <div class="mission-box">
+        <h2 class="section-title">La Nostra Missione</h2>
+        <p>Un luogo di passaggio, un varco di risveglio e riconnessione interiore. Accompagniamo anime in trasformazione attraverso uno spazio sicuro, accogliente e autentico.</p>
+    </div>
+
+    <h2 class="section-title">Attività per i Soci</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Meditazioni e Cerchi</h3>
+            <p>Incontri spirituali e pratiche olistiche per sostenere l'evoluzione individuale e collettiva.</p>
+        </div>
+        <div class="card">
+            <h3>Conferenze</h3>
+            <p>Eventi culturali e divulgativi volti a offrire strumenti concreti di consapevolezza.</p>
+        </div>
+        <div class="card">
+            <h3>Corsi Personali</h3>
+            <p>L'associazione ospita docenti esterni per percorsi di crescita specifica rivolti ai soci.</p>
+        </div>
+    </div>
+
+    <div class="tesseramento">
+        <h2>Diventa Socio 2026</h2>
+        <p>L'accesso a tutte le attività è riservato esclusivamente ai soci regolarmente tesserati.</p>
+        <div class="price">10€</div>
+        <p>Quota associativa annuale</p>
+        <a href="https://wa.me/393482959628" class="btn">Richiedi la Tessera</a>
+    </div>
+</div>
+
+<div class="footer-info">
+    <p>Svolto presso la sede dell’Associazione Chiave di Ankh – Spazio Evolutivo.</p>
+    <p>© 2026 Chiave di Ankh - Tutti i diritti riservati</p>
+</div>
+
+</body>
+</html>
